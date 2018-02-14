@@ -1,6 +1,6 @@
 # PyJavu
 
-`pyjavu` is an experimental package to generate sequential machines from formal specifications such as regular expressions.
+`pyjavu` is a Python implementation of the monitoring tool [DejaVu](https://github.com/havelund/tracecontract/tree/master/dejavu).
 
 # Install
 
@@ -88,7 +88,7 @@ This regular expression matches a sequence where `p1` or `p2` holds and then `p2
 
 # References
 
-This package is a toy Python implementation of the temporal logic monitoring tool, `DejaVu`, introduced in [First order temporal logic monitoring with BDDs](https://doi.org/10.23919/FMCAD.2017.8102249). `PyJavu` does not support all features of `DejaVu` but extends its functionality with regular expressions.
+This package is a toy Python implementation of the temporal logic monitoring tool, [DejaVu](https://github.com/havelund/tracecontract/tree/master/dejavu), introduced in [First order temporal logic monitoring with BDDs](https://doi.org/10.23919/FMCAD.2017.8102249). `PyJavu` does not support all features of `DejaVu` but extends its functionality with regular expressions.
 
-The sequential machine construction from regular expressions is explained [here](https://arxiv.org/pdf/1801.08979.pdf).
+Sequential machine construction from regular expressions is explained [here](https://arxiv.org/pdf/1801.08979.pdf).
 
