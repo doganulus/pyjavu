@@ -1,10 +1,10 @@
 # PyJavu
 
-`pyjavu` is a Python implementation of the monitoring tool [DejaVu](https://github.com/havelund/tracecontract/tree/master/dejavu).
+`pyjavu` is a testbed (and feature-incomplete) Python implementation of the monitoring tool [DejaVu](https://github.com/havelund/tracecontract/tree/master/dejavu).
 
 # Install
 
-This package requires `python3`,  `antlr4-python3-runtime`, `pandas` and the decision diagram package `dd`.
+This package requires `python3`, `antlr4-python3-runtime`, `pandas` and the decision diagram package `dd`.
 
 The easiest way to install `pyjavu` is to run the following command (that requires `git` installed in your system). 
 
@@ -39,11 +39,11 @@ Consider a `pandas` data frame with columns named `p1` and `p2` as follows:
         }
     df = pd.DataFrame(data=d)
 
-Suppose that we would like to evaluate regular expressions with data such as  
+Suppose that we would like to evaluate regular expressions **with data** such as  
 
     expression = r"exists{k}(k <= p2; k <= p1)"
 
-which specifies a pattern such that there exists a data value `k` that observed at `p2[i]` and then the same value observed at `p1[i+1]`. Thus the concatenation operator `;` here means sequential composition of patterns as usual. The assignment operator `<=` stores the current value at left hand side in a BDD-based database (see References) with the key `k` to be retrieved later.
+that specifies a pattern such that there exists a data value `k` that observed at `p2[i]` and then the same value observed at `p1[i+1]`. Thus the concatenation operator `;` here means sequential composition of patterns as usual. The assignment operator `<=` stores the current value at left hand side in a BDD-based database (see References) with the key `k` to be retrieved later.
 
 We evaluate this expression over the data frame `df` as follows:
 
@@ -107,7 +107,7 @@ The result by evaluating the expression above is as follows:
 
 # References
 
-This package is a toy Python implementation of the temporal logic monitoring tool, [DejaVu](https://github.com/havelund/tracecontract/tree/master/dejavu), introduced in [First order temporal logic monitoring with BDDs](https://doi.org/10.23919/FMCAD.2017.8102249). `PyJavu` does not support all features of `DejaVu` but extends its functionality with regular expressions.
+[DejaVu](https://github.com/havelund/tracecontract/tree/master/dejavu) system is introduced in [First order temporal logic monitoring with BDDs](https://doi.org/10.23919/FMCAD.2017.8102249) by Klaus Havelund, Doron Peled, and Dogan Ulus. `PyJavu` does not support all features of `DejaVu` but extends its functionality with regular expressions.
 
 Sequential machine construction from regular expressions is explained [here](https://arxiv.org/pdf/1801.08979.pdf).
 
